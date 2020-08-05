@@ -1,5 +1,12 @@
 # PHP-Router
 
+## Installation
+
+With Composer:
+```bash
+composer require gabrielix29/php-router
+```
+
 ## Example
 
 ```php
@@ -13,6 +20,7 @@ $router->add("%method%", "%route%", [new Controller(), "%controller method%"]); 
 $router->add("%method%", "%route%", function () { //with function
   echo "message";    
 });
+$router->run();
 ```
 allowed methods are: `GET`, `POST`, `PUT`, `DELETE`, `ALL` 
 
