@@ -1,0 +1,20 @@
+{
+  "name": "gabrielix29/PHP-Router",
+  "type": "library",
+  "description": "simple Router",
+  "keywords": ["php", "router"],
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "gabrielix29",
+      "email": "gabrielix29@protonmail.ch",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+
+    }
+  }
+}
