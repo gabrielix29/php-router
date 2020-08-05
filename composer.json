@@ -14,7 +14,7 @@
   ],
   "autoload": {
     "psr-4": {
-
+      "gabrielix29\\Router\\": "src"
     }
   }
 }
