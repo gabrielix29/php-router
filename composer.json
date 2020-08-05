@@ -1,9 +1,10 @@
 {
   "name": "gabrielix29/php-router",
+  "version": "0.1.0",
   "type": "library",
   "description": "simple Router",
   "keywords": ["php", "router"],
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "license": "MIT",
   "authors": [
     {
