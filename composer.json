@@ -2,7 +2,7 @@
   "name": "gabrielix29/php-router",
   "version": "0.1.0",
   "type": "library",
-  "description": "simple Router",
+  "description": "simple Router for web apps",
   "keywords": ["php", "router"],
   "minimum-stability": "dev",
   "license": "MIT",
