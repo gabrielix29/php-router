@@ -6,10 +6,12 @@ class Router
 {
     private array $routes;
     private array $allowedHttpMethods = ["GET", "POST", "PUT", "DELETE", "ALL"];
+    private array $customErrors;
 
     function __construct()
     {
         $this->routes = array();
+        $this->customErrors = array();
     }
 
     public function add(string $method, string $route, callable $closure)
@@ -22,6 +24,11 @@ class Router
                 "closure" => $closure
             ]);
         }
+    }
+
+    public function custom404(callable $closure)
+    {
+        $this->customErrors["404"] = $closure;
     }
 
     public function run()
@@ -42,7 +49,10 @@ class Router
 
         if (!$routeFound) {
             http_response_code(404);
-            exit();
+            if ($this->customErrors["404"]) {
+                $this->customErrors["404"]();
+            }
+            return;
         }
 
         $routeFound['closure']($uriParts);
